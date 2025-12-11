@@ -1,6 +1,6 @@
 # Todo List
 
-A simple, responsive Todo List application built using **Vue 3**, **Tailwind CSS**, and **LocalStorage**.  
+A simple, responsive Todo List application built using **Vue 3**, **Tailwind CSS**, and **ES6**.  
 This project was completed as part of a frontend assessment task (ASE Task).
 
 ---

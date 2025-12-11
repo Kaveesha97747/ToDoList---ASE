@@ -1,6 +1,6 @@
 <template>
   <li
-    class="bg-gray-100 dark:bg-gray-800 px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-sm
+    class="bg-[#dcf0f5] dark:bg-gray-800 px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-sm
            flex items-start justify-between gap-4
            transition hover:shadow-md hover:scale-[1.01]"
     :class="todo.completed ? 'opacity-80' : ''"

@@ -1,8 +1,8 @@
 <template>
   <div
     class="h-full md:px-48 md:py-20 px-5 py-8 
-           bg-gradient-to-b from-purple-300 to-white 
-           dark:from-gray-500 dark:to-gray-700 
+           bg-gradient-to-b from-[#193e47] to-white 
+           dark:from-gray-700 dark:to-gray-400 
            text-gray-900 dark:text-gray-100"
     style="animation: fadeSlideIn 0.5s ease;"
   >
@@ -11,14 +11,14 @@
       <!-- HEADER -->
       <header class="mb-6 flex items-center justify-between">
         <div>
-          <h1 class="text-2xl font-bold text-sky-800 dark:text-white">
+          <h1 class="text-2xl font-bold text-[#07232a] dark:text-white">
             FocusPad – Emphasizes productivity and focus.
           </h1>
         </div>
 
         <!-- DARK MODE TOGGLE -->
         <div class="flex items-center gap-2">
-          <span class="text-sm text-gray-500 dark:text-gray-300 hidden sm:inline">
+          <span class="text-sm text-[#07232a] font-bold dark:text-gray-300 hidden sm:inline">
             Theme
           </span>
 
