@@ -1,6 +1,6 @@
 <template>
   <form
-    class="bg-[#dcf0f5] dark:bg-gray-800 px-4 py-3 md:px-6 md:py-4 rounded-lg shadow-sm transition"
+    class="bg-white dark:bg-gray-800 px-4 py-3 md:px-6 md:py-4 rounded-lg shadow-sm transition"
     @submit.prevent="save"
   >
     <div class="flex flex-col gap-4">

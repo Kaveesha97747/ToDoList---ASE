@@ -1,6 +1,6 @@
 <template>
   <li
-    class="bg-[#dcf0f5] dark:bg-gray-800 px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-sm
+    class="bg-white dark:bg-gray-800 px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-sm
            flex items-start justify-between gap-4
            transition hover:shadow-md hover:scale-[1.01]"
     :class="todo.completed ? 'opacity-80' : ''"
@@ -67,8 +67,8 @@
 
       <button
         @click="$emit('delete', todo.id)"
-        class="text-xs px-3 py-1.5 rounded-md bg-rose-100 dark:bg-rose-500
-               text-rose-700 dark:text-white
+        class="text-xs px-3 py-1.5 rounded-md bg-rose-600 dark:bg-rose-800
+               text-white dark:text-white
                hover:bg-rose-200 dark:hover:bg-rose-600 hover:text-rose-800 dark:hover:text-white
                focus:outline-none focus:ring-2 focus:ring-rose-300
                transition button-pop"

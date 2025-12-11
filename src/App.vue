@@ -1,56 +1,57 @@
 <template>
   <div
-    class="h-full md:px-48 md:py-20 px-5 py-8 
-           bg-gradient-to-b from-[#193e47] to-white 
-           dark:from-gray-700 dark:to-gray-400 
+    class="h-full lg:px-48  md:px-16 md:py-20 px-5 py-8 
+           bg-gradient-to-b from-green-200 to-gray-300 
+           dark:from-gray-700 dark:to-gray-300 
            text-gray-900 dark:text-gray-100"
     style="animation: fadeSlideIn 0.5s ease;"
   >
     <div class="w-full mx-auto">
 
       <!-- HEADER -->
-      <header class="mb-6 flex items-center justify-between">
-        <div>
-          <h1 class="text-2xl font-bold text-[#07232a] dark:text-white">
-            FocusPad – Emphasizes productivity and focus.
-          </h1>
-        </div>
+      <header class="mb-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+  <div>
+    <h1 class="text-2xl font-bold text-[black] dark:text-white">
+      FocusPad – Emphasizes productivity and focus.
+    </h1>
+  </div>
 
-        <!-- DARK MODE TOGGLE -->
-        <div class="flex items-center gap-2">
-          <span class="text-sm text-[#07232a] font-bold dark:text-gray-300 hidden sm:inline">
-            Theme
-          </span>
+  <!-- DARK MODE TOGGLE -->
+  <div class="flex items-center gap-2 self-start md:self-auto">
+    <span class="text-sm text-[#07232a] font-bold dark:text-gray-300">
+      Theme
+    </span>
 
-          <button
-            @click="toggleDarkMode"
-            class="relative inline-flex items-center h-7 w-14 rounded-full
-                   bg-gray-200 dark:bg-gray-700 transition-colors duration-200
-                   focus:outline-none focus:ring-2 focus:ring-sky-300 button-pop"
-          >
-            <!-- icons -->
-            <span
-              class="absolute left-1 text-[10px]"
-              :class="isDark ? 'opacity-0' : 'opacity-100'"
-            >
-              ☀️
-            </span>
-            <span
-              class="absolute right-1 text-[10px]"
-              :class="isDark ? 'opacity-100' : 'opacity-0'"
-            >
-              🌙
-            </span>
+    <button
+      @click="toggleDarkMode"
+      class="relative inline-flex items-center h-7 w-14 rounded-full
+             bg-gray-200 dark:bg-gray-700 transition-colors duration-200
+             focus:outline-none focus:ring-2 focus:ring-sky-300 button-pop"
+    >
+      <!-- icons -->
+      <span
+        class="absolute left-1 text-[10px]"
+        :class="isDark ? 'opacity-0' : 'opacity-100'"
+      >
+        ☀️
+      </span>
+      <span
+        class="absolute right-1 text-[10px]"
+        :class="isDark ? 'opacity-100' : 'opacity-0'"
+      >
+        🌙
+      </span>
 
-            <!-- thumb -->
-            <span
-              class="inline-block h-5 w-5 rounded-full bg-white shadow
-                     transform transition-transform duration-200"
-              :class="isDark ? 'translate-x-7' : 'translate-x-1'"
-            ></span>
-          </button>
-        </div>
-      </header>
+      <!-- thumb -->
+      <span
+        class="inline-block h-5 w-5 rounded-full bg-white shadow
+               transform transition-transform duration-200"
+        :class="isDark ? 'translate-x-7' : 'translate-x-1'"
+      ></span>
+    </button>
+  </div>
+</header>
+
 
       <!-- FORM -->
       <section class="mb-4">
