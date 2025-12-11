@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-full lg:px-48  md:px-16 md:py-20 px-5 py-8 
+    class="min-h-screen lg:px-48  md:px-16 md:py-20 px-5 py-8 
            bg-gradient-to-b from-green-200 to-gray-300 
            dark:from-gray-700 dark:to-gray-300 
            text-gray-900 dark:text-gray-100"
@@ -85,15 +85,17 @@
         </div>
       </section>
 
-      <!-- LIST -->
-      <section>
-        <TodoList
-          :todos="filteredTodos"
-          @toggle="toggleComplete"
-          @edit="startEdit"
-          @delete="deleteTodo"
-        />
-      </section>
+      <section class="mt-2">
+  <div class="max-h-[65vh] overflow-y-auto overflow-x-hidden pr-1">
+    <TodoList
+      :todos="filteredTodos"
+      @toggle="toggleComplete"
+      @edit="startEdit"
+      @delete="deleteTodo"
+    />
+  </div>
+</section>
+
 
       <!-- FOOTER -->
       <footer class="mt-10 text-center text-xs text-gray-400 dark:text-gray-500">

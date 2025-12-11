@@ -51,5 +51,4 @@ npm install
 Run development server: npm run dev 
 Build for production: npm run build
 
-![Screenshot 2](https://github.com/user-attachments/assets/56ed2118-6059-4e72-9320-de02d1cc3521)
 
