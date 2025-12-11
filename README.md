@@ -51,4 +51,11 @@ npm install
 Run development server: npm run dev 
 Build for production: npm run build
 
+---
+
+## Live Demo
+
+Check out the working Todo List application here:  
+[🌐 Live Demo](https://teal-cascaron-526a08.netlify.app/)
+
 
