@@ -1,52 +1,63 @@
 <template>
-  <form class="bg-white dark:bg-gray-800 p-4 rounded shadow-sm transition">
-    <div class="flex flex-col gap-3">
+  <form
+    class="bg-white dark:bg-gray-800 px-4 py-3 md:px-6 md:py-4 rounded-lg shadow-sm transition"
+    @submit.prevent="save"
+  >
+    <div class="flex flex-col gap-4">
 
+      <!-- Title -->
       <input
         v-model="title"
         type="text"
         placeholder="Title (required)"
-        class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white 
-               rounded px-3 py-2 focus:outline-none focus:ring-2 
-               focus:ring-sky-200"
+        class="border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white
+               rounded-md px-3 py-2 text-sm
+               focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400"
         required
       />
 
+      <!-- Description -->
       <textarea
         v-model="description"
         rows="3"
         placeholder="Description (optional)"
-        class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white 
-               rounded px-3 py-2 focus:outline-none focus:ring-2 
-               focus:ring-sky-200"
+        class="border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white
+               rounded-md px-3 py-2 text-sm
+               focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 resize-none"
       ></textarea>
 
-      <div class="flex gap-2 items-center">
-        <input 
-          v-model="dueDate" 
-          type="date" 
-          class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white 
-                 rounded px-3 py-2" 
+      <!-- Due date -->
+      <div class="flex flex-wrap items-center gap-2">
+        <input
+          v-model="dueDate"
+          type="date"
+          class="border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white
+                 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-sky-300"
         />
-        <div class="text-sm text-gray-500 dark:text-gray-300">Due date</div>
+        <span class="text-sm text-gray-500 dark:text-gray-300">Due date</span>
       </div>
 
-      <div class="flex gap-2">
+      <!-- Actions -->
+      <div class="flex flex-wrap gap-2 pt-1">
         <button
-  type="submit"
-  class="px-4 py-2 rounded bg-sky-600 text-white text-sm 
-         hover:bg-sky-700 transition button-pop"
->
-  {{ isEditing ? 'Update' : 'Add' }}
-</button>
+          type="submit"
+          class="px-4 py-2 rounded-md bg-sky-600 text-white text-sm font-medium
+                 hover:bg-sky-700 active:bg-sky-800
+                 focus:outline-none focus:ring-2 focus:ring-sky-300
+                 transition button-pop"
+        >
+          {{ isEditing ? 'Update' : 'Add' }}
+        </button>
 
-
-        <button 
-          v-if="isEditing" 
-          type="button" 
-          @click="cancel" 
-          class="px-3 py-2 rounded border dark:border-gray-500 
-                 text-sm button-pop"
+        <button
+          v-if="isEditing"
+          type="button"
+          @click="cancel"
+          class="px-4 py-2 rounded-md border border-gray-300 dark:border-gray-500
+                 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700
+                 hover:bg-gray-100 dark:hover:bg-gray-600
+                 focus:outline-none focus:ring-2 focus:ring-gray-300
+                 transition button-pop"
         >
           Cancel
         </button>
@@ -55,6 +66,7 @@
     </div>
   </form>
 </template>
+
 
 
 <script setup>

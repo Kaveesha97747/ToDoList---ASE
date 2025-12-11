@@ -1,31 +1,59 @@
 <template>
-  <div class="h-screen md:px-48 md:py-20 px-5 py-8 
-              bg-gradient-to-b from-sky-50 to-white 
-              dark:from-gray-900 dark:to-gray-800 
-              text-gray-900 dark:text-gray-100"
-       style="animation: fadeSlideIn 0.5s ease;">
-    
+  <div
+    class="h-full lg:px-48  md:px-16 md:py-20 px-5 py-8 
+           bg-gradient-to-b from-green-200 to-gray-300 
+           dark:from-gray-700 dark:to-gray-300 
+           text-gray-900 dark:text-gray-100"
+    style="animation: fadeSlideIn 0.5s ease;"
+  >
     <div class="w-full mx-auto">
 
-      <header class="mb-6 flex items-center justify-between">
-        <div>
-          <h1 class="text-2xl font-bold text-sky-700 dark:text-sky-300">
-            Todo — ASE Task
-          </h1>
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            Mobile first • LocalStorage
-          </p>
-        </div>
+      <!-- HEADER -->
+      <header class="mb-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+  <div>
+    <h1 class="text-2xl font-bold text-[black] dark:text-white">
+      FocusPad – Emphasizes productivity and focus.
+    </h1>
+  </div>
 
-        <!-- DARK MODE TOGGLE -->
-        <button @click="toggleDarkMode"
-          class="px-3 py-1 text-sm rounded bg-gray-200 dark:bg-gray-700 
-                 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 
-       transition button-pop">
-          {{ isDark ? 'Light' : 'Dark' }}
-        </button>
-      </header>
+  <!-- DARK MODE TOGGLE -->
+  <div class="flex items-center gap-2 self-start md:self-auto">
+    <span class="text-sm text-[#07232a] font-bold dark:text-gray-300">
+      Theme
+    </span>
 
+    <button
+      @click="toggleDarkMode"
+      class="relative inline-flex items-center h-7 w-14 rounded-full
+             bg-gray-200 dark:bg-gray-700 transition-colors duration-200
+             focus:outline-none focus:ring-2 focus:ring-sky-300 button-pop"
+    >
+      <!-- icons -->
+      <span
+        class="absolute left-1 text-[10px]"
+        :class="isDark ? 'opacity-0' : 'opacity-100'"
+      >
+        ☀️
+      </span>
+      <span
+        class="absolute right-1 text-[10px]"
+        :class="isDark ? 'opacity-100' : 'opacity-0'"
+      >
+        🌙
+      </span>
+
+      <!-- thumb -->
+      <span
+        class="inline-block h-5 w-5 rounded-full bg-white shadow
+               transform transition-transform duration-200"
+        :class="isDark ? 'translate-x-7' : 'translate-x-1'"
+      ></span>
+    </button>
+  </div>
+</header>
+
+
+      <!-- FORM -->
       <section class="mb-4">
         <TodoForm
           :editingTodo="editingTodo"
@@ -34,6 +62,7 @@
         />
       </section>
 
+      <!-- FILTERS -->
       <section class="mb-4 flex gap-2 items-center">
         <div class="flex gap-1 bg-white dark:bg-gray-700 p-1 rounded shadow-sm">
           <button
@@ -56,6 +85,7 @@
         </div>
       </section>
 
+      <!-- LIST -->
       <section>
         <TodoList
           :todos="filteredTodos"
@@ -65,7 +95,8 @@
         />
       </section>
 
-      <footer class="mt-8 text-center text-xs text-gray-400 dark:text-gray-500">
+      <!-- FOOTER -->
+      <footer class="mt-10 text-center text-xs text-gray-400 dark:text-gray-500">
         Built with Vue 3 • LocalStorage
       </footer>
 
