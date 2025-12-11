@@ -69,7 +69,7 @@
         @click="$emit('delete', todo.id)"
         class="text-xs px-3 py-1.5 rounded-md bg-rose-600 dark:bg-rose-800
                text-white dark:text-white
-               hover:bg-rose-200 dark:hover:bg-rose-600 hover:text-rose-800 dark:hover:text-white
+               hover:bg-rose-200 dark:hover:bg-rose-500 hover:text-rose-800 dark:hover:text-white
                focus:outline-none focus:ring-2 focus:ring-rose-300
                transition button-pop"
       >
