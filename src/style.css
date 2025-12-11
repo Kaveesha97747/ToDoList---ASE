@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small helper */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+}
+
+/* Page Fade Animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Pop Effect */
+.button-pop {
+  transition: transform 0.15s ease;
+}
+.button-pop:active {
+  transform: scale(0.95);
+}
+
+/* Todo Enter / Leave Animations */
+.todo-enter-from {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+.todo-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.todo-enter-active {
+  transition: all 0.25s ease;
+}
+
+.todo-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+.todo-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.todo-leave-active {
+  transition: all 0.25s ease;
+  position: absolute;
+}
