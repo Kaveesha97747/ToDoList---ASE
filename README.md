@@ -25,10 +25,10 @@ This project was completed as part of a frontend assessment task (ASE Task).
 - **Responsive Design**  
   Mobile-first layout, works seamlessly on both desktop and mobile screens.
 
-- **Optional Enhancements** *(not implemented in basic version)*  
+- **Optional Enhancements**  
   - Dark mode toggle  
   - Animations for adding/deleting tasks  
-  - Drag-and-drop reordering of todos
+ 
 
 ---
 ## Tech Stack
